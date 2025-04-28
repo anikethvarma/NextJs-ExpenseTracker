@@ -24,9 +24,9 @@ export default function Home() {
     }
   };
 
-  return <><div className="header-bg">
+  return <><div className="bg">
     <h1>Expense Tracker</h1>
-    <Add />
+    <Add/>
   </div>
   {showAllData && <AllData allData={allData}/>}
   </>

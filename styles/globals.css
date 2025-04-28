@@ -133,3 +133,16 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.bg{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  
+}
+
+.data-bg{
+  width: 90vw;
+  margin: auto;
+}
