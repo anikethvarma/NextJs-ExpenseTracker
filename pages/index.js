@@ -1,7 +1,6 @@
 import { useState, useEffect, use } from "react";
 import Add from './components/Add'
 import AllData from './components/AllData'
-import './index.css'
 
 
 export default function Home() {
