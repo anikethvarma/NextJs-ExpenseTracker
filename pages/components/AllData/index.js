@@ -69,7 +69,7 @@ const AllData = (props) => {
         </TableHeader>
         <TableBody>
           {allData.map((eachElement) => (
-            <TableRow key={eachElement._id}>
+            <TableRow key={eachElement.id}>
               <TableCell className="font-medium">{eachElement.description}</TableCell>
               <TableCell>{eachElement.date}</TableCell>
               <TableCell className="text-right">{eachElement.amount}</TableCell>

@@ -2,8 +2,8 @@ import { MongoClient } from "mongodb";
 
 export default async function handler(req, res) {
     if (req.method === "POST") {
-        const { amount, date, description } = req.body;
-        const Item = {amount: parseInt(amount), date, description}
+        const { id, amount, date, description } = req.body;
+        const Item = {id, amount: parseInt(amount), date, description}
 
         const client = new MongoClient(process.env.MONGODB_URI, {
             useNewUrlParser: true,

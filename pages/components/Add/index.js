@@ -11,6 +11,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import {useState} from 'react'
+import {v4 as uuidv4} from 'uuid'
 
 
 const Add = (props) => {
@@ -27,7 +28,7 @@ const Add = (props) => {
                 headers: {
                   "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ amount, date, description }),
+                body: JSON.stringify({ id:uuidv4(),amount, date, description }),
               });
           
               if (response.ok) {
