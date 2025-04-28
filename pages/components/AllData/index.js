@@ -8,13 +8,22 @@ import {
     TableHeader,
     TableRow,
   } from "@/components/ui/table"
+import { useEffect, useState } from "react";
   
 
   
 const AllData = (props) => {
-    const {allData} = props;
+    const [allData, setAllData] = useState([]);
+    const [showTable, setshowTable] = useState(false);
 
-    return (
+    useEffect(() => {
+        const {allData} = props;
+        setAllData(allData);
+        setshowTable(true);
+    }, [])
+
+    return <>
+    {showTable && (
       <Table className="data-bg">
         <TableCaption>A list of your transactions.</TableCaption>
         <TableHeader>
@@ -41,7 +50,8 @@ const AllData = (props) => {
           </TableRow>
         </TableFooter>
       </Table>
-    )
+    )}
+    </>
   }
   
   export default AllData
