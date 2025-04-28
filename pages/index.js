@@ -28,7 +28,7 @@ export default function Home() {
     <h1>Expense Tracker</h1>
     <Add />
   </div>
-  <AllData allData={allData}/>
+  {showAllData && <AllData allData={allData}/>}
   </>
 
 }
