@@ -67,15 +67,7 @@ const AllData = (props) => {
             <TableHead className="text-right">Amount</TableHead>
           </TableRow>
         </TableHeader>
-        <TableBody>
-          {allData.map((eachElement) => (
-            <TableRow key={eachElement.id}>
-              <TableCell className="font-medium">{eachElement.description}</TableCell>
-              <TableCell>{eachElement.date}</TableCell>
-              <TableCell className="text-right">{eachElement.amount}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
+        
         <TableFooter>
           <TableRow>
             <TableCell colSpan={3}>Total</TableCell>
