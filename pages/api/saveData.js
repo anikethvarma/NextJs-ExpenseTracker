@@ -1,5 +1,5 @@
 import { MongoClient } from "mongodb";
-
+MONGODB_URI= "mongodb+srv://anikethvarma:abc1234@cluster0.aic6s.mongodb.net/"
 export default async function handler(req, res) {
     if (req.method === "POST") {
         const { id, amount, date, description } = req.body;
