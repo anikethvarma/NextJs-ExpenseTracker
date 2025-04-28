@@ -15,9 +15,11 @@ import { useEffect, useState } from "react";
 const AllData = (props) => {
     const [allData, setAllData] = useState([]);
     const [showTable, setshowTable] = useState(false);
+    const [total, setTotal] = useState(0);
 
     useEffect(() => {
         const {allData} = props;
+        
         setAllData(allData);
         setshowTable(true);
     }, [])
@@ -43,12 +45,6 @@ const AllData = (props) => {
             </TableRow>
           ))}
         </TableBody>
-        <TableFooter>
-          <TableRow>
-            <TableCell colSpan={3}>Total</TableCell>
-            <TableCell className="text-right">0</TableCell>
-          </TableRow>
-        </TableFooter>
       </Table>
     )}
     </>
