@@ -1,8 +1,8 @@
 import { MongoClient } from "mongodb";
-MONGODB_URI= "mongodb+srv://anikethvarma:abc1234@cluster0.aic6s.mongodb.net/"
+const MONGODB_URI= "mongodb+srv://anikethvarma:abc1234@cluster0.aic6s.mongodb.net/"
 export default async function handler(req, res) {
     if (req.method === "GET") {
-        const client = new MongoClient(process.env.MONGODB_URI, {
+        const client = new MongoClient(MONGODB_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
