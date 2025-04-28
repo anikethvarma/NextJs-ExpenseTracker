@@ -1,7 +1,10 @@
 import { MongoClient } from "mongodb";
 
 export default async function handler(req, res) {
-    if (req.method === "GET") {
+    if (req.method === "POST") {
+        const { amount, date, description } = req.body;
+        const Item = {amount: parseInt(amount), date, description}
+
         const client = new MongoClient(process.env.MONGODB_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
@@ -15,9 +18,10 @@ export default async function handler(req, res) {
 
             // Choose a name for your collection
             const collection = database.collection("transactions");
-            const allData = await collection.find({}).toArray();
 
-            res.status(200).json(allData);
+            await collection.insertOne({ ...Item });
+
+            res.status(201).json({ message: "Data saved successfully!" });
         } catch (error) {
             res.status(500).json({ message: "Something went wrong!" });
         } finally {
