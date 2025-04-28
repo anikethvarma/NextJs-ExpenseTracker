@@ -24,7 +24,7 @@ export default function Home() {
     }
   };
 
-  return <><div className="bg">
+  return <><div className="header-bg">
     <h1>Expense Tracker</h1>
     <Add/>
   </div>

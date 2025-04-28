@@ -34,7 +34,7 @@ const AllData = (props) => {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {allData.map((eachElement) => (
+          {allData && allData.map(eachElement => (
             <TableRow key={eachElement.id}>
               <TableCell className="font-medium">{eachElement.description}</TableCell>
               <TableCell>{eachElement.date}</TableCell>
